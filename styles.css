@@ -1,28 +1,33 @@
+/* Aseguramos que el header y navbar tengan altura completa */
 header {
     background-color: rgb(73, 73, 73);
-    width: 100%;
-    height: 4rem;
-}
-.hover-effect {
-    color: #ffffff; /* Color predeterminado (puedes cambiarlo si quieres) */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+    height: 3rem; /* Define la altura del header */
 }
 
-.hover-effect:hover {
-    color: white; /* Cambiar el color del texto a blanco */
-    height: 100%;
-    background-color: #707070; /* Cambiar el fondo a azul */
-}
-.hover-effect:active {
-    color: white; /* El texto cambia a negro cuando el enlace es presionado */
-    background-color: #707070; /* Fondo gris claro cuando el enlace es activo */
+.navbar {
+    height: 100%; /* El navbar ocupará todo el alto del header */
 }
 
-/* Si estás usando la clase "active" para indicar la página activa */
-a {
-    height: 100%;
+/* Estilo de los enlaces */
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el texto dentro del enlace */
+    height: 100%;  /* Hace que el enlace ocupe toda la altura disponible */
+    padding-top: 0;  /* Elimina el padding superior */
+    padding-bottom: 0;  /* Elimina el padding inferior */
+    color: #ffffff; /* Color de texto por defecto */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
 }
-nav a.active {
-    color: #ffffff; /* El texto se mantiene blanco */
-    background-color: #707070; /* Fondo oscuro para la página activa */
+
+/* Efecto hover */
+.nav-link:hover {
+    background-color: #707070; /* Fondo gris claro en hover */
+    color: #ffffff;  /* Mantener texto blanco en hover */
+}
+
+/* Enlace activo */
+.nav-link.active {
+    background-color: #707070; /* Fondo gris claro cuando está activo */
+    color: #ffffff; /* Mantener texto blanco cuando está activo */
 }
